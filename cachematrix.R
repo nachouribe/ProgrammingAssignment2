@@ -1,4 +1,5 @@
-makeMatrix <- function(x = matrix()) {     #this create  a function that is receiving a Matrix
+#this create  a function that create a special Matrix
+makeMatrix <- function(x = matrix()) {     
         m <- NULL
         set <- function(y) {
                 x <<- y
@@ -14,8 +15,9 @@ makeMatrix <- function(x = matrix()) {     #this create  a function that is rece
 
 
 
+ #this calculate (in cache) the inverse matrix of the first function if  the inverse is already computed, otherwise it will compute the inverse matrix again
 
-cacheinverse <- function(x, ...) {                            #this calculate (in cache) inverse  of the matrix of the first fuction 
+cacheinverse <- function(x, ...) {                           
         m <- x$getinverse()
         if(!is.null(m)) {
                 message("getting cached data")
